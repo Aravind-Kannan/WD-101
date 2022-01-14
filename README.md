@@ -53,3 +53,59 @@ There are 8 levels in this course. Here, are a few key personal takeways, or sho
     - doesn’t have its own repo, it’s a part of Bootstrap.
     - It’s definitely opinionated, but in a way that rolls with Bootstrap nicely. The fact that it’s buried within Bootstrap is pretty good signaling this is designed for that world, not as a drop-in for any project.
 - Explained a few Tailwind CSS classes: p-[tailwind unit], m-[tailwind unit], bg-[color (standardColors)]-[intensity (50,100...800)], container
+
+## Level 4 - Working with Strings
+
+- `JavaScript` - Most popular Programming Language
+- JavaScript Console available in browser
+- `const` keyword creates immutable values
+- In older scripts, you may also find another keyword: `var` instead of `let`
+- [**Note on `the old 'var'`**](https://javascript.info/var#var-tolerates-redeclarations)
+
+  - **var has no block scope**, i.e., they are either function-scoped or global-scoped: As we can see, var pierces through if, for or other code blocks. That’s because a long time ago in JavaScript, blocks had no Lexical Environments, and var is a remnant of that.
+  - **var tolerates redeclarations**: If we declare the same variable with let twice in the same scope, that’s an error. With var, we can redeclare a variable any number of times.
+  - **var variables can be declared below their use**: var declarations are processed when the function starts (or script starts for globals). In other words, var variables are defined from the beginning of the function, no matter where the definition is (assuming that the definition is not in the nested function). People also call such behavior **“hoisting”** (raising), because all var are “hoisted” (raised) to the top of the function.
+  - **Declarations are hoisted, but assignments are not.**
+  - **IIFE**: In the past, as there was only var, and it has no block-level visibility, programmers invented a way to emulate it. What they did was called “immediately-invoked function expressions” (abbreviated as IIFE).
+
+    ```
+    // Ways to create IIFE
+
+    (function() {
+      alert("Parentheses around the function");
+    })();
+
+    (function() {
+      alert("Parentheses around the whole thing");
+    }());
+
+    !function() {
+      alert("Bitwise NOT operator starts the expression");
+    }();
+
+    +function() {
+      alert("Unary plus starts the expression");
+    }();
+    ```
+
+    -These differences make var worse than let most of the time.
+
+- Join Strings together [string concatenation]
+  - Using the `+` operator e.g.: `let greeting = prefix + firstName;`
+  - Using the `concat` function e.g.: `let greeting = prefix.concat(firstName);`
+- Including JS in HTML
+- Comments in HTML and JavaScript
+- Length of string: Using member variable for each string: `"<string>".length`
+- Introduction to Conditionals
+- String inside string[case sensitive]: `"str+substr".includes("substr")`
+- Introduction to Booleans
+- Substring functionality: `<string>.substring(start, end)`
+  - Obtains the substring in the given string from `start` to `end - 1`
+  - `start` is required, index starts from 0
+  - `end` is optional
+  - if `start < 0`, start = 0
+  - if `start > end`, params are swapped
+- Introduction to Comparision Operator `===`
+- Introduction to Array: first collection based data structure
+- Inplace sorting `<array>.sort()`
+- Splitting strings by pattern `<string>.split(<pattern>)`
