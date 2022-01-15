@@ -33,10 +33,10 @@ There are 8 levels in this course. Here, are a few key personal takeways, or sho
   - **Meyer reset**: Updated for HTML5 elements, else similar approach to Tantek's idea; one of the more popular resets
   - **Richard Clark's HTML5 Reset**: modified version of the Meyer reset, and the retained that spirit
   - **Minimal Approach**: plenty of developers who went minimal by just zapping margin and padding from everything
-    ```
+    ```css
     * {
-    padding: 0;
-    margin: 0;
+      padding: 0;
+      margin: 0;
     }
     ```
   - 🤡: `CSS-tricks` logo was insipired by the universal selector
@@ -68,24 +68,24 @@ There are 8 levels in this course. Here, are a few key personal takeways, or sho
   - **Declarations are hoisted, but assignments are not.**
   - **IIFE**: In the past, as there was only var, and it has no block-level visibility, programmers invented a way to emulate it. What they did was called “immediately-invoked function expressions” (abbreviated as IIFE).
 
-    ```
+    ```javascript
     // Ways to create IIFE
 
-    (function() {
+    (function () {
       alert("Parentheses around the function");
     })();
 
-    (function() {
+    (function () {
       alert("Parentheses around the whole thing");
-    }());
+    })();
 
-    !function() {
+    !(function () {
       alert("Bitwise NOT operator starts the expression");
-    }();
+    })();
 
-    +function() {
+    +(function () {
       alert("Unary plus starts the expression");
-    }();
+    })();
     ```
 
     -These differences make var worse than let most of the time.
