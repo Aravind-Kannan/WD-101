@@ -109,3 +109,45 @@ There are 8 levels in this course. Here, are a few key personal takeways, or sho
 - Introduction to Array: first collection based data structure
 - Inplace sorting `<array>.sort()`
 - Splitting strings by pattern `<string>.split(<pattern>)`
+
+## Level 5 - Numbers, Booleans, Objects & Arrays
+
+- Numbers
+  - Representation: Difference between Number strings and numbers
+  - Basic arithmetic calculation
+  - Boolean comparisions
+  - Convert string to number: `Number(<string>)` - if invalid number, then returns `NaN` [Not a number], else the actual numeric value of the string, alternatively, an `unary + operator` can be used
+  - Math properties and functions
+    - `Math.PI`
+    - `Math.E`
+    - `Math.pow(<base>, <exponent>)`
+    - `Math.max(<arg1>, <arg2>, ..., <argN>)`
+    - `Math.min(<arg1>, <arg2>, ..., <argN>)`
+- Boolean
+  - Relational operators (like `>=, <=, <, >`)
+  - Logical operators (like `&&, ||, !`)
+- Objects
+
+  - For representing a single logical unit of data as key-value pairs
+
+    ```javascript
+    let masteryBook = {title: "Mastery", author: "Robert Greene", availableCount: 5, format: "paperback"};
+
+    // access method 1: dot operator
+    console.log(masteryBook.title);
+
+    // access method 2: [] operator
+    console.log(masteryBook["title]);
+    ```
+
+  - Create an object
+  - Read an object
+  - Update an object
+  - Nested objects
+
+- Arrays
+  - Represent a collection of values
+  - Array index begins at **zero**
+  - Access an array element by index
+  - Update array element at index
+- Appreciate use of **passphrase over password**
