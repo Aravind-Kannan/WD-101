@@ -151,3 +151,42 @@ There are 8 levels in this course. Here, are a few key personal takeways, or sho
   - Access an array element by index
   - Update array element at index
 - Appreciate use of **passphrase over password**
+
+## Level 6: Functions - code we can call multiple times!
+
+- Creating function
+  ```javascript
+  let sayHello = () => console.log("Hello");
+  sayHello();
+  let greetHello = (name) => console.log("Hello, " + name);
+  greetHello("Alan");
+  ```
+- When we refactor code the structure of the code changes. We do not change the functionality or the existing behaviour of the code.
+- A function like console.log performs a side-effect. It does not return any value, but it prints the string we passed as argument to the web browser console.
+- A function can return another function
+- A function returns `undefined` when there is no `return` statement present in that function
+- When functions are passed as arguments to other functions, we refer to them as **callback functions** or simply **callbacks**.
+
+  ```javascript
+  // callbackFunction called after time_in_ms expires
+  let timeoutID = setTimeout(
+    callbackFunction,
+    time_in_ms,
+    args_for_callback_function
+  );
+
+  // we can stop the execution of the callbackFunction before the time_in_ms expires by clearing it out
+  clearTimeout(timeoutID);
+
+  // callbackFunction with delay time_in_ms expires
+  let intervalID = setinterval(
+    callbackFunction,
+    time_in_ms,
+    args_for_callback_function
+  );
+
+  // we can stop the execution of the callbackFunction by clearing it out
+  clearTimeout(intervalID);
+  ```
+
+- **Google** is your best friend!
