@@ -237,3 +237,15 @@ There are 8 levels in this course. Here, are a few key personal takeways, or sho
 - Minimal UI for filtering flight search results
 - Use the index of the array value with filter
 - Task: Create a function to filter data
+
+## Level 8: Building a game with canvas
+
+- Installing `node.js` for `npx http-server`
+- Introduction to Canvas
+- [Dynamic Drawings](https://www.pupilfirst.school/targets/11354)
+- Absolute and relative paths
+- Loading multiple animations
+- Control using buttons and key press
+- Capstone: Access **Martial Arts Simulator Project**
+  - Source code: [Github](https://github.com/Aravind-Kannan/martial-arts-game)
+  - Live Website: [Github Pages](https://aravind-kannan.github.io/martial-arts-game/)
