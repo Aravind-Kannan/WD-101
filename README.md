@@ -190,3 +190,50 @@ There are 8 levels in this course. Here, are a few key personal takeways, or sho
   ```
 
 - **Google** is your best friend!
+
+## Level 7: Colections
+
+- Intro to `<array>.forEach(<callback_with_array_content_arg>)`
+
+  ```javascript
+  let items = ["object-oriented", "functional", "procedural", "declarative"];
+  // Callback with (value)
+  items.forEach(() => console.log(value));
+
+  // Callback with (value, index)
+  let logItem = (value, index) => {
+    console.log(String(index + 1) + ". " + value);
+  };
+
+  items.forEach(logItem);
+  ```
+
+- HTML List: Creating unordered list with list item using Javascript (`ListGen.html`)
+- Nested Array Iteration: Create multiplication tables (`MulTables.html`)
+- Found a small hack for pretty printing: **console.table(<collection-based-data>)**
+- `<array-type>.map(<callback>)` function - used to return a new array after iterating through a given array, similar to `forEach`
+  ```javascript
+  let items = ["object-oriented", "functional", "procedural", "declarative"];
+  let reverse = (item) => item.split("").reverse().join("");
+  let reversed = items.map(reverse);
+  console.table(reversed);
+  ```
+- Refactor `ListGen.html` to support the `map` function
+- Refactor `MulTables.html` to `MulTablesUsingMap.html`
+- `<array-type>.filter(<callback-returns-boolean>)` function - The filter function works very similarly to the forEach and map functions. The callback function provided to a filter function should return either true or false. The callback function is expected to run a test on the array value. If it meets the filtering criteria, then return true. This includes that value in the resulting array. If the callback function returns false the corresponding value is excluded from the resulting array.
+
+  ```javascript
+  let songsByAdele = [
+    { album: "25", name: "Hello" },
+    { album: "25", name: "Set fire to the rain" },
+    { album: "21", name: "Rolling in the dDep" },
+  ];
+
+  let filtered = songsByAdele.filter((item) => item.album === "25");
+
+  console.table(filtered);
+  ```
+
+- Minimal UI for filtering flight search results
+- Use the index of the array value with filter
+- Task: Create a function to filter data

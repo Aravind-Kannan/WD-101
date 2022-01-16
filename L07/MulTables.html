@@ -1,0 +1,42 @@
+<h1>Multiplication Tables</h1>
+
+<div id="table" style="display: flex"></div>
+
+<script>
+  let number = 2;
+  let numbers = [1, 2, 3];
+  let multipliers = [1, 2, 3, 4, 5];
+
+  let result = [];
+
+  numbers.forEach((n) => {
+    let table = [];
+    let createMultiplicationLineItem = (number, multiplier) => {
+      let product = number * multiplier;
+      table.push(
+        "<p>" +
+          String(number) +
+          " x " +
+          String(multiplier) +
+          " = " +
+          String(product) +
+          "</p>"
+      );
+    };
+
+    multipliers.forEach((x) => createMultiplicationLineItem(n, x));
+
+    // console.table(table);
+
+    let multiplicationTableToHtml = (table) =>
+      '<div style="padding: 8px 16px; background-color: beige; margin-right: 16px;">' +
+      table.join("\n") +
+      "</div>";
+
+    result.push(multiplicationTableToHtml(table));
+  });
+
+  //   console.table(result);
+
+  document.getElementById("table").innerHTML = result.join("\n");
+</script>

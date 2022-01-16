@@ -1,0 +1,36 @@
+<h1>Multiplication Tables</h1>
+
+<div id="table" style="display: flex"></div>
+
+<script>
+  let numbers = [1, 2, 3];
+  let multipliers = [1, 2, 3, 4, 5];
+
+  let tables = numbers.map((num) => {
+    return multipliers.map((factor) => {
+      let product = num * factor;
+      return (
+        "<p>" +
+        String(num) +
+        " x " +
+        String(factor) +
+        " = " +
+        String(product) +
+        "</p>"
+      );
+    });
+  });
+  console.table(tables);
+
+  let result = tables.map((table) => {
+    return (
+      '<div style="padding: 8px 16px; background-color: beige; margin-right: 16px;">' +
+      table.join("\n") +
+      "</div>"
+    );
+  });
+
+  console.table(result);
+
+  document.getElementById("table").innerHTML = result.join("\n");
+</script>

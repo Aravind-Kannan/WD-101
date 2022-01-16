@@ -1,0 +1,23 @@
+<h2>Programming Languages!</h2>
+
+<ul id="languages"></ul>
+
+<script>
+  let languages = ["Python", "C", "C++", "Java", "Typescript", "Ruby on rails"];
+
+  //   // forEach
+  //   let result = [];
+
+  //   let createListItem = (value) => {
+  //     let element = "<li>" + value + "</li>";
+  //     result.push(element);
+  //   };
+
+  //   languages.forEach(createListItem);
+
+  //map
+  let createListItem = (value) => "<li>" + value + "</li>";
+  let result = languages.map(createListItem);
+
+  document.getElementById("languages").innerHTML = result.join("\n");
+</script>
